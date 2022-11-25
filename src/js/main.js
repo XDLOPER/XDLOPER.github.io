@@ -1,3 +1,5 @@
+
+
 const body = document.getElementById("body");
 const myFunc = (e)=>{
     alert(e)
@@ -21,4 +23,4 @@ const cubeGenerate = ()=>{
 
 
 
-export {body,myFunc,cubeCreate,cubeGenerate}
+module.exports = {body,myFunc,cubeCreate,cubeGenerate}

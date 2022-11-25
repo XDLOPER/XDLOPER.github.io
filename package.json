@@ -1,0 +1,23 @@
+{
+  "name": "example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack ./src/js/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/XDLOPER/myExample.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/XDLOPER/myExample/issues"
+  },
+  "homepage": "https://github.com/XDLOPER/myExample#readme",
+  "devDependencies": {
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.0"
+  }
+}
