@@ -9,3 +9,6 @@ setInterval(() => {
     }
 }, 1);
 
+setInterval(() => {
+    exp.star.innerHTML = "";
+}, 100);
