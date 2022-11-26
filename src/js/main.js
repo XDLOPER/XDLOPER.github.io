@@ -1,5 +1,6 @@
-
-
+const pageScroll =  (e)=>{
+    window.scrollBy(0,e); // horizontal and vertical scroll increments
+}
 const star = document.getElementById("star");
 const myFunc = (e)=>{
     alert(e)
@@ -23,4 +24,4 @@ const cubeGenerate = ()=>{
 
 
 
-module.exports = {star,myFunc,cubeCreate,cubeGenerate}
+export{pageScroll,star,myFunc,cubeCreate,cubeGenerate}
