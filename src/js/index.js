@@ -14,7 +14,7 @@ button.addEventListener('click',(e)=>{
 });
 
 setInterval(() => {
-    for (let index = 0; index < 1; index++) {
+    for (let index = 0; index < 10; index++) {
         exp.cubeGenerate();
     }
 }, 1);
