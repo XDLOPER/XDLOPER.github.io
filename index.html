@@ -8,6 +8,8 @@
     <link rel="stylesheet" type="text/css" href="src/css/style.css" >
     <link rel="stylesheet" type="text/css" href="src/css/reset.css" >
     <link rel="stylesheet" href="src/css/media.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
 <body id="body">
     <div id="main_section">
@@ -23,13 +25,44 @@
         <h1 id="two">powered by <b style="color:#7a34bd;">< XASTRAL ></b></h1>
         <div id="form">
 
-            <form method="post">
-                <input type="text" placeholder="you write email">
-                <textarea id="textarea" cols="30" rows="10" placeholder="What would you like"></textarea>
+            <form action="https://api.emailjs.com/api/v1.0/email/send-form" id="sendForm">
+                <input required name="from_email" type="text" placeholder="you write email">
+                <textarea required name="message" id="textarea" cols="30" rows="10" placeholder="What would you like"></textarea>
                 <input type="submit" value="send !"></input>
             </form>
         </div>
     </div>
+    <script type="text/javascript">
+
+        $('#sendForm').on('submit', function(event) {
+            event.preventDefault(); // prevent reload
+
+            var from_email = $('input[name="from_email"]').val();
+            var message = $('textarea[name="message"]').val();
+            if(from_email !== "" || message !== ""){
+                var data = {
+                    service_id: 'service_yxopre5',
+                    template_id: 'template_h5wwgji',
+                    user_id: '6D-UiJy1EbPMEZ7_k',
+                    template_params: {
+                        'from_email': from_email,
+                        'message':message,
+                    }
+                };
+                
+
+                $.ajax('https://api.emailjs.com/api/v1.0/email/send', {
+                    type: 'POST',
+                    data: JSON.stringify(data),
+                    contentType: 'application/json'
+                }).done(function() {
+                    alert('Your mail is sent!');
+                }).fail(function(error) {
+                    alert('Oops... ' + JSON.stringify(error));
+                });                
+            }
+        });
+    </script>
     <script type="module" src="src/js/index.js"></script>
 </body>
 </html>
