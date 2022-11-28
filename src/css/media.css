@@ -1,0 +1,31 @@
+@media screen and (max-width:1700px) {
+    #button{width: 20%;}
+}
+@media screen and (max-width:900px) {
+    #button{width: 20%;}
+    
+    #github p{font-size:20px; width: 70%; margin:0; top:25%; left: 50%; transform:translate(-50%,-50%);}
+    #github #form{width:70%; transform:translate(-50%,10%); left:50%;}
+    #github #form textarea:active{height:150px;}
+    #github #form textarea:focus{height:150px;}
+}
+
+@media screen and (max-width:810px) {
+    #button{width: 60%;}
+    #github #form{transform:translate(-50%,10%);}
+    #github p{font-size:18px;}
+}
+@media screen and (max-width:600px) {
+    #button{width: 55%;}
+    .h1{font-size:25px; letter-spacing:10px;}
+    #github p{font-size:18px; transform: translate(-50%,-40%) ;}
+}
+@media screen and (max-width:500px) {
+    #button{width: 50%;}
+    #github p{font-size:18px;}
+    #one{font-size:25px;}
+}
+@media screen and (max-width:400px) {
+    #button{width: 55%;}
+    #github h1#two{bottom:30px;}
+}

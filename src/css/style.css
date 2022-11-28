@@ -5,11 +5,12 @@ body{overflow-x:hidden; background:#000; color:#000; font-family: 'Inconsolata',
 ::-webkit-scrollbar{display:none !important;}
 
 
-#star{width:100%; height:100vh; position: relative;}
+#star{width:100%; height:100vh; position: relative; overflow: hidden;}
+div#main_section{position: relative; width:100%; height:100vh;}
 .h1{margin:auto; color:azure; font-weight:bolder; font-family: Arial, Helvetica, sans-serif; letter-spacing:20px; text-align: center; width: 100%; position: absolute; top:50%; transform: translate(0,-100%);}
 
-#button{left:50%; top:50%; position: absolute; font-weight:900; background:rgb(255, 255, 255); transition: all 5s; padding: 10px 20px; transform: translate(-50%,60%); border-radius: 100px; border: 2px solid #fff; }
-#button:hover{background: #000; color:#fff; transform: translate(-50%,60%) scale(1.1); cursor: pointer; transition: all 0.4s; }
+#button{transition:all 1s; position: absolute; width:10%;  right:50%; transform: translate(50%,40%); top:50%; font-weight:900; background:rgb(255, 255, 255); padding: 10px 0px; border-radius: 100px; border: 2px solid #fff; }
+#button:hover{background: #000; color:#fff; transform: translate(50%,40%) scale(1.1); cursor: pointer; transition: all 0.4s; }
 #button:active{transition: all 0.1s; opacity:0.2;}
 
 #github{position: relative; width: 100%; height:100vh; background:#fff; background-image:url('https://github.githubassets.com/images/modules/logos_page/Octocat.png');
@@ -18,11 +19,11 @@ body{overflow-x:hidden; background:#000; color:#000; font-family: 'Inconsolata',
  #github h1#one{position:absolute; text-align: center; width:100%; margin:50px 0px; font-style: normal; font-family: Arial, Helvetica, sans-serif;}
  #github h1#two{position:absolute; font-size:20px; bottom:50px; width: 100%; text-align: center; margin:auto; letter-spacing: 1px; color: #444;}
  #github p{width: 30%; margin:0 50px; top:50%; transform:translateY(-50%); padding:10px; position:absolute; color:#888;  line-height: 20px;}
- #github #form{box-sizing:border-box; position:absolute; width:200px; transition:all 0.5s; right:10%; top:50%; transform: translate(0,-50%); display: block;}
+ #github #form{box-sizing:border-box; position:absolute; width:250px; transition:all 0.5s; right:10%; top:50%; transform: translate(0,-50%); display: block;}
  #github #form h1{font-size:25px; text-align: center; width: 100%; margin-bottom:20px; font-family: Arial, Helvetica, sans-serif; font-weight:100;}
  #github #form input[type="text"]{width: 100%; border: none; padding:10px 0; border-radius:10px 10px 0 0; text-align: center; background: #eee;}
  #github #form input[type="submit"]{width: 100%; margin-top:-4px; border:none; transition: all 0.2s; padding:10px 0; background:rgb(14, 194, 14); color:white; border-radius:0px 0px 10px 10px;}
  #github #form input[type="submit"]:hover{background:rgb(3, 255, 66); transition: all 0.2s; cursor:pointer; }
  #github #form textarea{background:rgb(249 249 249); box-sizing:border-box; width: 100%; height:150px; padding:10px; line-height:30px; border:none; transition:0.5s;}
- #github #form textarea:active{height:500px !important; transition:0.5s;}
- #github #form textarea:focus{height:500px !important; transition:0.5s;}
+ #github #form textarea:active{height:500px; transition:0.5s;}
+ #github #form textarea:focus{height:500px; transition:0.5s;}
